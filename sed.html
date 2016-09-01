@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>Imad Pasha</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    
+    <script src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/smoothscroll.js"></script> 
+    <script src="assets/js/Chart.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#nav">
+
+	<div id="section-topbar">
+		<div id="topbar-inner">
+			<div class="container">
+				<div class="row">
+					<div class="dropdown">
+						<div class="nav ph-line-nav">
+ 							 <a href="index.html">Home</a>
+							  <a href="about.html">Bio</a>
+							  <a href="research.html">Research</a>
+							  <a href="teaching.html">Teaching</a>
+							  
+							  <div class="effect"></div>
+							</div>
+					<!--	<ul id="nav" class="nav">
+							<li class="menu-item"><a href="index.html" title="Home">Home</a></li>
+							<li class="menu-item"><a class="smoothScroll" href="about.html" title="About">Bio</a></li>
+							<li class="menu-item"><a class="smoothScroll" href="research.html" title="Resume">Research</a></li>
+							<li class="menu-item"><a class="smoothScroll" href="teaching.html" title="Works">Teaching</a></li>
+							<li class="menu-item"><a class="smoothScroll" href="#contact" title="Contact">Contact</a></li>
+						</ul><!--/ uL#nav -->
+					</div><!-- /.dropdown -->
+
+					<div class="clear"></div>
+				</div><!--/.row -->
+			</div><!--/.container -->
+
+			<div class="clear"></div>
+		</div><!--/ #topbar-inner -->
+	</div><!--/ #section-topbar -->
+	
+	<div id="headerwrap">
+		<div class="container">
+			<div class="row centered">
+				<div class="col-lg-12">
+					<div id="test4"><h1>Imad Pasha</h1></div>
+					<div id="test44"><h3>Undergraduate Researcher | University of California, Berkeley</h3></div>
+				</div><!--/.col-lg-12 -->
+			</div><!--/.row -->
+		</div><!--/.container -->
+	</div><!--/.#headerwrap -->
+	
+
+
+	<section id="research" name="research"></section>
+	<!--PORTFOLIO DESCRIPTION -->
+	<div class="container desc">
+		<div class="row">
+				<h2 align="left">Extending Composite SED for Mid-redshift Galaxies into IR using Herschel and MIPS Data</h2>
+				<hr>
+				<br>
+					
+				<div class="col-lg-6 col-lg-offset-0">
+					<p><img class="img-responsive" src="assets/img/figure1.jpg" alt=""></p>
+				</div>
+					<p><more>
+
+						When looking at very faint distant galaxies, it is almost impossible to get high quality spectroscopic data. Usually, only photometric data can be obtained, however, this gives only a single point on a spectrum. Broadband photometry allows for the overall general shape of the spectral curve to be seen, but with only several photometric points, there is no chance of picking out individual spectral lines such as H-alpha.</more></p>
+<p><more>
+Dr. Kriek developed a method of creating SED's which actually show such spectroscopic features. The method reduces to taking a large sample of galaxies ~3500 from a sky survey with a lot of data from different bands, de-redshifting them, and then matching them. Using an iterative method, the galaxies could be sorted into 32 SED types (with some galaxies from the initial survey rejected for noise, etc). Then all galaxies in each type were scaled to one of the galaxies termed the "primary" galaxy, with the output being a broadband SED but with many, many more data points (all of the gaps filled in). From this, lines like H-alpha are actually resolved (fig. 1).</more></p>
+
+
+<p><more>
+These SED's allow us to fit models of SFR (star formation rate) to each class of galaxy and then determine a SFH (star formation history). Collectively these models are known as SPS or Stellar Populaiton Synthesis models. However, an important factor in setting up the model involves the amount of dust attenuation in the galaxy, either to ISM dust or CSM dust around stars. Light from stars is absorbed by the dust and then re-radiated at long wavelengths. While the origina SED's produced were only in the optical range, if they could be extended into IR, it would allow for the SFR models to actually model the dust emmision, and leave factors like dust temperature, PAH, and optical depth (amount of dust) as free parameters, allowing us to constrain the properties of the SED types even further.</more></p>
+<p><more>
+I am using Herschel data, which is IR photometry, to extend the SED curves into IR and allow for the fitting of full SFR+dust models to the data. The first step was sorting through the catalog of Herschel fluxes and pulling those which match the galaxies used in the original optical composite SED creation, and sort them by SED type. I then began stacking the data using different methods to produce the points that will be used when fitting the SFR models (fig. 2).</more></p>
+<p><more>
+
+<p><more>
+With the extended SED's created, it comes time to fit them using the SPS models. Using the FSPS (flexible stellar population synthesis) code by Conroy et. al., one can input a variety of parameters for SFH, dust temperature and type, various published profiles for attenuation, etc, and generate a model spectrum which would be what you expect from a galaxy with those characteristics. By nesting many iterations over the accepted value ranges for each parameter, we create a library of many (several hundred thousand) sample spectra with different combinations of all the relevant parameters. Using either a chi-squared fit or an MCMC, we will explore this parameter space and find which generated SPS spectra best matches our SED for each SED type, giving valuable insight into the dust properties of those types of galaxies. One of the parameters not mentioned above is the age of the galaxy, as the spectrum changes over time after the primary "starburst" of star formation. Fig. 3 shows an animation of one of the SPS outputs, evolving over time.</more></p>
+						<br>
+						<hr>
+					
+					
+
+				
+				<!--
+				<div class="col-lg-6 col-lg-offset-3">
+					<p><img class="img-responsive" src="assets/img/port03.jpg" alt=""></p>
+				</div>
+				<div class="col-lg-3">
+						<p>WE GROW</p>
+					<p><more>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br/><br/>
+						<sm><i class="icon-tag"></i> web design</sm></more> 
+					</p>
+				</div>
+					-->
+		</div><!--/.row -->
+		<br>
+		<br>
+	</div><!--/.container -->
+	
+
+	<section id="contact" name="contact"></section>
+	<!--FOOTER DESCRIPTION -->
+	<div id="footwrap">
+		<div class="container">
+			<div class="row">
+			
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>CONTACT</h5>
+				</div>
+				<div class="col-lg-6">
+					<p><t>Email</t><br/>
+						ipasha@berkeley.edu <br/>
+					</p>
+					<p><t>Department Address</t><br/>
+						Campbell Hall <br/>
+						UC Berkeley <br/>
+						Berkeley, CA 94720 <br/>
+					</p>
+					
+				</div>
+				<div class="col-lg-3">
+					<p><sm>SOCIAL LINKS</sm></p>
+					<p>
+						<a href="#"><i class="icon-dribbble"></i></a>
+						<a href="#"><i class="icon-twitter"></i></a>
+						<a href="#"><i class="icon-facebook"></i></a>
+						<a href="#"><i class="icon-linkedin"></i></a>
+						<a href="#"><i class="icon-apple"></i></a>
+
+					</p>
+				</div>
+			</div><!--/.row -->
+		</div><!--/.container -->
+	</div><!--/ #footer -->
+	
+	<div id="c">
+		<div class="container">
+			<p>Copyright <a href="#"> Imad Pasha, 2015</a></p>
+		
+		</div>
+	</div>
+	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.js"></script>
+  </body>
+</html>
